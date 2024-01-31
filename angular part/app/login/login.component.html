@@ -1,0 +1,95 @@
+<div class="container-fluid">
+  <div class="row" style="height: 100vh">
+    <!-- Left Block -->
+    <div id="left" class="col-9 bg-warning d-flex flex-column">
+      <div>
+        <fa-icon
+          [icon]="faCoffee"
+          style="
+            font-size: 60px;
+            color: yellow;
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+          "
+        ></fa-icon>
+      </div>
+      <div
+        class="h3"
+        style="
+          font-size: 60px;
+          color: black;
+          display: flex;
+          justify-content: center;
+        "
+      >
+        Welcome To Coffee Shop
+      </div>
+      <div
+        class="h6"
+        style="
+          font-size: 25px;
+          display: flex;
+          justify-content: center;
+          color: crimson;
+          margin-top: 10px;
+        "
+      >
+        Good Ideas Start With Brainstorming.Great Ideas Start With Coffee!!
+      </div>
+    </div>
+
+    <!-- Right Block-->
+    <div
+      class="col-3 bg-light d-flex flex-column justify-content-center align-items-center"
+      [formGroup]="fbFormGroup"
+    >
+      <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+        A simple danger alert—check it out!
+      </div>
+
+      <div
+        style="border: 3px solid black; height: 50vh; background: palevioletred"
+      >
+        <div class="h3 mb-4" style="margin-left: 58px; margin-top: 25px">
+          Login Here!
+        </div>
+
+        <div style="margin-left: 40px; margin-right: 40px">
+          <input
+            type="text"
+            placeholder="Enter Username"
+            class="form-control"
+            formControlName="username"
+          />
+        </div>
+
+        <div class="mt-4" style="margin-left: 40px; margin-right: 40px">
+          <input
+            type="password"
+            placeholder="Enter Password"
+            class="form-control"
+            formControlName="password"
+          />
+        </div>
+
+        <button
+          class="btn btn-sm btn-primary mt-4 mb-4"
+          style="margin-left: 80px; font-size: 20px"
+          [disabled]="!fbFormGroup.valid"
+          (click)="loginProcessHere()"
+        >
+          Login Here
+        </button>
+
+        <br />
+
+        <a
+          routerLink="/register"
+          style="margin-left: 50px; font-size: 15px; color: black"
+          >Not a Member? Sign Up Now</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

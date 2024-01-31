@@ -1,0 +1,15 @@
+create database register;
+use register;
+
+create table User
+(
+UserName varchar(30),
+Password varchar(30),
+Email varchar(30),
+Mobile varchar(30)
+);
+
+desc user;
+
+insert into User values('Snehal' , '1234' , 'snehal@gmail.com' , '8806044953');
+select * from user;

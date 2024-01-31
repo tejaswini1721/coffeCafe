@@ -1,0 +1,25 @@
+create database orderform;
+use orderform;
+
+create table details
+(
+coffeeType varchar(30),
+quantity varchar(30),
+name varchar(30),
+email varchar(30),
+phoneNumber varchar(30),
+deliveryAddress varchar(30),
+city varchar(30),
+zipCode varchar(30)
+);
+
+
+desc details;
+
+insert into details values('blackcoffee' , '2' , 'snehal' , 'snehal@gmail.com' , '8806044953', 'shri ram nagar' , 'mumbai' , '416');
+
+select * from details;
+
+
+
+

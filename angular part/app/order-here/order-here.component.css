@@ -1,0 +1,10 @@
+#order {
+  width: 100vw;
+  height: 100vh;
+  background: url("D:\Angular\final-project\src\assets/image2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-left: 0px;
+  margin-right: 0px;
+}

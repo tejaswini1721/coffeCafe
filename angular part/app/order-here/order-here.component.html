@@ -1,0 +1,112 @@
+<div class="container-fluid">
+  <div class="row" style="height: 100vh">
+    <!-- Right Block-->
+    <div
+      id="order"
+      class="col bg-light d-flex flex-column justify-content-center align-items-center"
+      [formGroup]="fbFormGroup"
+    >
+      <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+        A simple danger alert—check it out!
+      </div>
+
+      <div
+        id="form"
+        style="
+          border: 10px solid white;
+          height: 80vh;
+          background: white;
+          margin-top: 5px;
+        "
+      >
+        <div class="h4 mb-3" style="margin-left: 55px">Order Here!</div>
+
+        <div style="margin-left: 40px; margin-right: 40px">
+          <input
+            type="text"
+            placeholder="Enter Coffee Type"
+            class="form-control"
+            formControlName="coffeeType"
+          />
+        </div>
+
+        <div class="mt-2" style="margin-left: 40px; margin-right: 40px">
+          <input
+            type="text"
+            placeholder="Enter quantity"
+            class="form-control"
+            formControlName="quantity"
+          />
+        </div>
+
+        <div class="mt-2" style="margin-left: 40px; margin-right: 40px">
+          <input
+            type="text"
+            placeholder="Enter name"
+            class="form-control"
+            formControlName="name"
+          />
+        </div>
+
+        <div class="mt-2" style="margin-left: 40px; margin-right: 40px">
+          <input
+            type="text"
+            placeholder="Enter email"
+            class="form-control"
+            formControlName="email"
+          />
+        </div>
+
+        <div class="mt-2" style="margin-left: 40px; margin-right: 40px">
+          <input
+            type="text"
+            placeholder="Enter phone number"
+            class="form-control"
+            formControlName="phoneNumber"
+          />
+        </div>
+
+        <div class="mt-2" style="margin-left: 40px; margin-right: 40px">
+          <input
+            type="text"
+            placeholder="Enter delivery address"
+            class="form-control"
+            formControlName="deliveryAddress"
+          />
+        </div>
+
+        <div class="mt-2" style="margin-left: 40px; margin-right: 40px">
+          <input
+            type="text"
+            placeholder="Enter city"
+            class="form-control"
+            formControlName="city"
+          />
+        </div>
+
+        <div class="mt-2" style="margin-left: 40px; margin-right: 40px">
+          <input
+            type="text"
+            placeholder="Enter zip code"
+            class="form-control"
+            formControlName="zipCode"
+          />
+        </div>
+
+        <button
+          class="btn btn-sm btn-success mt-2 mb-3"
+          style="margin-left: 80px; font-size: 20px"
+          [disabled]="!fbFormGroup.valid"
+          (click)="orderHere()"
+        >
+          place order
+        </button>
+        <br />
+
+        <a routerLink="/home" style="margin-left: 60px; font-size: 20px"
+          >Go back to home</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
